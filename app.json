@@ -1,0 +1,46 @@
+{
+    "name": "ᴊᴀʀᴠɪs sᴛʀɪɴɢ ʜᴀᴄᴋ ʀᴏʙᴏᴛ",
+    "description": "sᴛʀɪɴɢ ʜᴀᴄᴋ ʀᴏʙᴏᴛ",
+    "logo": "",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "banall"
+    ],
+    "website": "https://t.me/Doraemon890",
+    "repository": "https://github.com/doraemon890/STRING-HACK",
+    "success_url": "https://t.me/Doraemon890",
+    "env": {
+        "API_ID": {
+            "description": "your API_ID ",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "your API_HASH ",
+            "required": true
+        },
+        "TOKEN": {
+            "description": "your bot token",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "Basic"
+        }
+    },
+    "stack": "container"
+    }
