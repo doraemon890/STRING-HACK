@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 
 #client
 app = Client(
-    "SupremeStark",
+    "Jarvis",
     api_id = API_ID,
     api_hash = API_HASH,
     bot_token = TOKEN )
