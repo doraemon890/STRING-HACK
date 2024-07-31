@@ -11,7 +11,7 @@ from pyromod import listen
 #getting variables
 API_ID = Config.API_ID
 API_HASH = Config.API_HASH
-TOKEN = Config.TOKEN
+TOKEN = Config.BOT_TOKEN
 START_PIC = Config.START_PIC
 
 
