@@ -1,7 +1,7 @@
 motor==3.0.0
-pyrogram==2.0.97
+git+https://github.com/doraemon890/pyrogram
 pyromod==1.5
-TgCrypto
+TgCrypto==1.2.5
 python-dotenv==0.21.0
 telethon==1.26.1
 rich==13.3.1
