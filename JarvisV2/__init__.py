@@ -5,7 +5,7 @@ from config import Config
 from pyrogram import Client
 from rich.console import Console
 from rich.table import Table
-from JARVISSESSIONHACK.Helpers.data import LOG_TEXT
+from JarvisV2.Helpers.data import LOG_TEXT
 from pyromod import listen 
 
 #getting variables
@@ -34,7 +34,7 @@ app = Client(
     
 
 
-async def JARVISSESSIONHACK():
+async def JarvisV2():
     os.system("clear")
     header = Table(show_header=True, header_style="bold green")
     header.add_column(LOG_TEXT)
@@ -46,4 +46,4 @@ async def JARVISSESSIONHACK():
 
 
 loop = asyncio.get_event_loop()
-loop.run_until_complete(JARVISSESSIONHACK())    
+loop.run_until_complete(JarvisV2())    

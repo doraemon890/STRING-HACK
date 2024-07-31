@@ -113,4 +113,4 @@ BOT_TOKEN = $bot_token""" > .env
 clear
 
 pprint "\n\n\nThanks for using Ava installer, your vars have been saved successfully! \nIf you wanna add more variables add them in your env by: vi .env"
-pprint "\n\nNow you can start the bot by: python3 -m JARVISSESSIONHACK\n\n"
+pprint "\n\nNow you can start the bot by: python3 -m JarvisV2\n\n"

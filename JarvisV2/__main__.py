@@ -2,13 +2,13 @@ import asyncio
 import importlib
 
 from pyrogram import idle
-from JARVISSESSIONHACK import LOG
-from JARVISSESSIONHACK.modules import ALL_MODULES
+from JarvisV2 import LOG
+from JarvisV2.modules import ALL_MODULES
 
 
 async def start_bot():
     for all_module in ALL_MODULES:
-        importlib.import_module("JARVISSESSIONHACK.modules." + all_module)
+        importlib.import_module("JarvisV2.modules." + all_module)
     LOG.print("[bold yellow]ʜᴀᴄᴋ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ ɴᴏᴡ ʀᴇᴀᴅʏ ᴛᴏ ғᴜᴄᴋ ᴜsᴇʀs")
     await idle() 
     LOG.print("[bold red]ᴄᴀɴᴄᴇʟʟᴇᴅ ᴀʟʟ ᴛᴀsᴋ🤐..........")

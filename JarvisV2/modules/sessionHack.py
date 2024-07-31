@@ -1,7 +1,7 @@
 import os
-from JARVISSESSIONHACK import app,API_ID,API_HASH
+from JarvisV2 import app,API_ID,API_HASH
 from pyrogram import filters , Client
-from JARVISSESSIONHACK.Helpers.steve import (
+from JarvisV2.Helpers.steve import (
     users_gc,
     user_info,
     banall,
@@ -14,7 +14,7 @@ from JARVISSESSIONHACK.Helpers.steve import (
     del_acc,
     piromote,
     demote_all)
-from JARVISSESSIONHACK.Helpers.data import HACK_MODS 
+from JarvisV2.Helpers.data import HACK_MODS 
 from pyrogram.types import CallbackQuery 
 from pyrogram.raw import functions
 from telethon import TelegramClient 

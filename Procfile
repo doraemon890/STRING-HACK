@@ -1,1 +1,1 @@
-worker: python3 -m JARVISSESSIONHACK
+worker: python3 -m JarvisV2

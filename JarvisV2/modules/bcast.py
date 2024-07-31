@@ -1,9 +1,9 @@
 from pyrogram import filters
 from config import Config
 
-from JARVISSESSIONHACK import app
-from JARVISSESSIONHACK.Helpers.mongo import get_served_chats
-from JARVISSESSIONHACK.Helpers.mongo import get_served_users
+from JarvisV2 import app
+from JarvisV2.Helpers.mongo import get_served_chats
+from JarvisV2.Helpers.mongo import get_served_users
 
 IS_BROADCASTING = False
 SUDOERS = Config.SUDOERS

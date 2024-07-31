@@ -5,7 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 # Mongo Database
 try:
-    mongodb = AsyncIOMotorClient(Config.MONGO_URL).Daxx
+    mongodb = AsyncIOMotorClient(Config.MONGO_URL).ULTRON
 except:
     print("Please Change Your MongoDB")
     sys.exit()

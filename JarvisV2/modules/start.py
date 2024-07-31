@@ -1,7 +1,7 @@
 from pyrogram import filters
-from JARVISSESSIONHACK import app , START_PIC
-from JARVISSESSIONHACK.Helpers.data import PM_TEXT,PM_BUTTON,HACK_MODS,HACK_TEXT
-from JARVISSESSIONHACK.Helpers.mongo import add_served_user
+from JarvisV2 import app , START_PIC
+from JarvisV2.Helpers.data import PM_TEXT,PM_BUTTON,HACK_MODS,HACK_TEXT
+from JarvisV2.Helpers.mongo import add_served_user
 from pyrogram.types import CallbackQuery
 
 
